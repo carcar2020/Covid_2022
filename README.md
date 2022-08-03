@@ -7,4 +7,4 @@
   current total deaths, total cases and death rate.
 - Data was extracted from the World Health Organazition's website.
  
-![alt text](https://github.com/carcar2020/Covid_2022/blob/main/webapppic.png?raw=true)
+![alt text](https://github.com/carcar2020/Covid_2022/blob/main/webapppic2.png?raw=true)
