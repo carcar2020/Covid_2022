@@ -95,7 +95,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
 
     totalcovid19_cases_by_month.rename(index={1: 'January', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July', 8: 'August'}, inplace = True)
     
-    fig_month_total = px.bar ( totalcovid19_cases_by_month, x = totalcovid19_cases_by_month.index, y= 'Total Cases', 
+    fig_month_total = px.line ( totalcovid19_cases_by_month, x = totalcovid19_cases_by_month.index, y= 'Total Cases', 
                           title= "<b>Total Covid Cases By Month</b>", 
                           color_discrete_sequence= ["#95A5A6"] * len(totalcovid19_cases_by_month),text_auto='.2s' ,  
                           template = "plotly_white") 
