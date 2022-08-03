@@ -15,7 +15,7 @@ st.set_page_config(page_title = " COVID-19 2022", page_icon = ":bar_chart:" , la
 @st.cache
 def get_data_from_csv():
 
-    df = pd.read_csv("COVIDdata2.csv")
+    df = pd.read_csv("COVIDdata3.csv")
     return df
 df = get_data_from_csv()
 
