@@ -60,6 +60,7 @@ hide_st_style = """
                     """
     
 st.markdown(hide_st_style, unsafe_allow_html = True) 
+st.markdown("---")
 total_covid19_p = 0
 # TOP KPI'S 
 total_covid19_cases = int(df_selection['Total Cases'].sum())
@@ -85,7 +86,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
         st.subheader("Updated")
         st.subheader(f"8-2-2022")
 
-st.markdown("---")
+
 
    #Total Covid-19 Cases by Month [BarChart]
 
