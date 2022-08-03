@@ -89,7 +89,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
     totalcovid19_cases_by_month = (df_selection.groupby(by='Month').sum()[['Total Cases']].sort_values(by='Month')
     )
 
-    totalcovid19_cases_by_month.rename(index={1: 'Janaury', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July'}, inplace = True)
+    totalcovid19_cases_by_month.rename(index={1: 'Janaury', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July', 8: 'August'}, inplace = True)
     
     fig_month_total = px.bar ( totalcovid19_cases_by_month, x = totalcovid19_cases_by_month.index, y= 'Total Cases', 
                           title= "<b>Total Covid Cases By Month</b>", 
@@ -103,7 +103,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
     # Covid Deaths by month [Barchart]
    Deaths_by_month = df_selection.groupby(by='Month').sum()[['Total Deaths']].sort_values(by='Month')
    
-   Deaths_by_month.rename(index={1: 'Janaury', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July', 'August':8}, inplace = True)
+   Deaths_by_month.rename(index={1: 'Janaury', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July', 8:'August'}, inplace = True)
    fig_Monthly_Death = px.bar( Deaths_by_month, x= Deaths_by_month.index, y= "Total Deaths",
    title = "<b>Deaths By Month</b>", color_discrete_sequence = ["#95A5A6"]* len(Deaths_by_month),
    template = "plotly_white", text_auto='.2s'
