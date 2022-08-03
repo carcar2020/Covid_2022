@@ -68,7 +68,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
    total_covid19_p = float((total_covid19_deaths / total_covid19_cases) *100 )
 
 
-   left_column, middle_column, right_column = st.columns(3)
+   left_column, middle_column, right_column, right_column2 = st.columns(4)
    with left_column:
     st.subheader("Total Cases:")
     st.subheader(f"{total_covid19_cases:,}")
@@ -81,8 +81,11 @@ if total_covid19_cases and total_covid19_deaths != 0:
         st.subheader("{:.3f}%".format(total_covid19_p))
     else:
         st.subheader(f"0")
+    with right_column2:
+        st.subheader("Updated")
+        st.subheader(f"8-2-2022")
 
-    st.markdown("---")
+st.markdown("---")
 
    #Total Covid-19 Cases by Month [BarChart]
 
