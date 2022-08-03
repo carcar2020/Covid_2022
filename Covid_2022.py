@@ -8,7 +8,7 @@ from PIL import Image
 image = Image.open('arrow2.png')
 
 
-st.set_page_config(page_title = " COVID-19 2022", page_icon = ":bar_chart:" , layout= "wide")
+st.set_page_config(page_title = " COVID-2022", page_icon = ":bar_chart:" , layout= "wide")
 
 
 # better performance
