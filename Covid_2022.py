@@ -84,7 +84,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
         st.subheader(f"0")
     with right_column2:
         st.subheader("Updated")
-        st.subheader(f"8-2-2022")
+        st.subheader(f"8-9-2022")
 
 
 
