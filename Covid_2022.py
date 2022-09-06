@@ -135,8 +135,8 @@ if total_covid19_cases and total_covid19_deaths != 0:
 
 
    left_column.plotly_chart(fig_month_total, use_container_width = True)
-   middle_column.plotly_chart(fig_month_total_lineplot, use_container_width = True)
-   right_column.plotly_chart(fig_Monthly_Death, use_container_width = True)
+   right_column.plotly_chart(fig_month_total_lineplot, use_container_width = True)
+   middle_column.plotly_chart(fig_Monthly_Death, use_container_width = True)
 
     
  
