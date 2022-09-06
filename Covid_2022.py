@@ -108,7 +108,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
     
     #Total Covid-19 Cases by Month [Line Chart]
     fig_month_total_lineplot = px.line(totalcovid19_cases_by_month, x = totalcovid19_cases_by_month.index, y= 'Total Cases',
-                                       title = '<b>Covid Cases Trend</b>')
+                                       title = '<b>Covid Cases Trend</b>', color = 'grey')
     
     fig_month_total.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False) 
     fig_month_total_lineplot.update_layout( plot_bgcolor = "rgb(205, 97, 85)", yaxis = (dict(showgrid=False)), xaxis = dict(tickmode="linear") )
