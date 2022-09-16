@@ -16,7 +16,7 @@ st.set_page_config(page_title = " COVID-2022", page_icon = ":bar_chart:" , layou
 @st.cache
 def get_data_from_csv():
 
-    df = pd.read_csv("COVIDdata6.csv")
+    df = pd.read_csv("COVIDdata7.csv")
     return df
 df = get_data_from_csv()
 
@@ -85,7 +85,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
         st.subheader(f"0")
     with right_column2:
         st.subheader("Updated")
-        st.subheader(f"9-6-2022")
+        st.subheader(f"9-15-2022")
 
 
 
