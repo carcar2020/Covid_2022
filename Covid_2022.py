@@ -54,7 +54,7 @@ df_selection = da.query( "Country == @Country")
 
 
 # MAINPAGE
-st.title("Covid-19 2022")
+st.title(image2,"Covid-19 2022")
 st.markdown("##")
 hide_st_style = """
         <style>
