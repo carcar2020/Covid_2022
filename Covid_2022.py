@@ -66,6 +66,9 @@ hide_st_style = """
 st.markdown(hide_st_style, unsafe_allow_html = True) 
 st.markdown("---")
 total_covid19_p = 0
+
+# Add The month with the most cases and display the total cases for that month. ------------------------------------------------------------------------  IDEA IDEA IDEA 
+
 # TOP KPI'S 
 total_covid19_cases = int(df_selection['Total Cases'].sum())
 total_covid19_deaths = int(df_selection['Total Deaths'].sum())
