@@ -6,10 +6,13 @@ from datetime import date
 import plotly.express as px 
 import streamlit as st
 from PIL import Image
+
+# Importing image 
 image = Image.open('arrow2.png')
+image2 = Image.open('co19.png')
 
-
-st.set_page_config(page_title = " COVID-2022", page_icon = ":bar_chart:" , layout= "wide")
+# ":bar_chart:"
+st.set_page_config(page_title = " COVID-2022", page_icon = image2 , layout= "wide")
 
 
 # better performance
