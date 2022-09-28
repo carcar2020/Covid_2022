@@ -26,7 +26,7 @@ df = get_data_from_csv()
     
 
 
-# Data that will not be used is dropped
+# Removing Data that will not be used for analyzes.
 df = df.drop(columns= ['WHO_region', 'Cumulative_cases', 'Cumulative_deaths' ])
 
 
@@ -36,13 +36,14 @@ df['Date_reported'] = pd.to_datetime(df['Date_reported'])
 # Filtering the Data for 2022 Only.
 nf = df[df['Date_reported'] >= '01-01-2022']
 
-# Copied Dataframe and added a month column
+# Copied Dataframe and extracted the month to create a month column
 da = nf.copy()
 da['Month'] = da['Date_reported'].dt.month
 
 da.rename(columns = {'New_cases': 'Total Cases', 'New_deaths': 'Total Deaths'}, inplace = True)
-# Sidebar
 
+
+# Sidebar that lets you filter data by Country
 st.sidebar.header("Filter Data Here:")
 
 Country = st.sidebar.multiselect(
@@ -53,7 +54,7 @@ df_selection = da.query( "Country == @Country")
 
 
 # MAINPAGE
-st.title(":bar_chart: Covid-19 2022")
+st.title(image2,":bar_chart: Covid-19 2022")
 st.markdown("##")
 hide_st_style = """
         <style>
