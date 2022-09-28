@@ -64,7 +64,7 @@ hide_st_style = """
                     """
     
 st.markdown(hide_st_style, unsafe_allow_html = True) 
-st.markdown("***")
+st.markdown("---")
 total_covid19_p = 0
 # TOP KPI'S 
 total_covid19_cases = int(df_selection['Total Cases'].sum())
