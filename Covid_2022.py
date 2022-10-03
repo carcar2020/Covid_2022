@@ -19,7 +19,7 @@ st.set_page_config(page_title = " COVID-2022", page_icon = image2 , layout= "wid
 @st.cache
 def get_data_from_csv():
 
-    df = pd.read_csv("COVIDdata8.csv")
+    df = pd.read_csv("COVIDdata9.csv")
     return df
 df = get_data_from_csv()
 
@@ -91,7 +91,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
         st.subheader(f"0")
     with right_column2:
         st.subheader("Updated")
-        st.subheader(f"9-24-2022")
+        st.subheader(f"10-03-2022")
 
 
 
@@ -100,7 +100,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
     totalcovid19_cases_by_month = (df_selection.groupby(by='Month').sum()[['Total Cases']].sort_values(by='Month')
     )
 
-    totalcovid19_cases_by_month.rename(index={1: 'January', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July', 8: 'August', 9: 'September'}, inplace = True)
+    totalcovid19_cases_by_month.rename(index={1: 'January', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July', 8: 'August', 9: 'September', 10: 'October'}, inplace = True)
     
     fig_month_total = px.bar ( totalcovid19_cases_by_month, x = totalcovid19_cases_by_month.index, y= 'Total Cases', 
                           title= "<b>Total Covid Cases By Month</b>", 
@@ -124,7 +124,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
     # Covid Deaths by month [Barchart]
    Deaths_by_month = df_selection.groupby(by='Month').sum()[['Total Deaths']].sort_values(by='Month')
    
-   Deaths_by_month.rename(index={1: 'January', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July', 8:'August', 9: 'September'}, inplace = True)
+   Deaths_by_month.rename(index={1: 'January', 2: 'February', 3: 'March', 4:'April', 5:'May', 6:'June', 7:'July', 8:'August', 9: 'September', 10: 'October'}, inplace = True)
    fig_Monthly_Death = px.bar( Deaths_by_month, x= Deaths_by_month.index, y= "Total Deaths",
    title = "<b>Deaths By Month</b>", color_discrete_sequence = ["#95A5A6"]* len(Deaths_by_month),
    template = "plotly_white", text_auto='.2s'
