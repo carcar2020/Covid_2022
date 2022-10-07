@@ -19,7 +19,7 @@ st.set_page_config(page_title = " COVID-2022", page_icon = image2 , layout= "wid
 @st.cache
 def get_data_from_csv():
 
-    df = pd.read_csv("COVIDdata9.csv")
+    df = pd.read_csv("COVIDdata10.csv")
     return df
 df = get_data_from_csv()
 
