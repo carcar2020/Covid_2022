@@ -19,7 +19,7 @@ st.set_page_config(page_title = " COVID-2022", page_icon = image2 , layout= "wid
 @st.cache
 def get_data_from_csv():
 
-    df = pd.read_csv("COVIDdata11.csv")
+    df = pd.read_csv("COVIDdata12.csv")
     return df
 df = get_data_from_csv()
 
@@ -91,7 +91,7 @@ if total_covid19_cases and total_covid19_deaths != 0:
         st.subheader(f"0")
     with right_column2:
         st.subheader("Updated")
-        st.subheader(f"10-15-2022")
+        st.subheader(f"10-21-2022")
 
 
 
