@@ -18,15 +18,17 @@ st.set_page_config(page_title = " COVID-2022", page_icon = image2 , layout= "wid
 # better performance
 @st.cache
 def get_data_from_csv():
-
-    df = pd.read_csv("COVIDdata12.csv")
+    try:
+        df = pd.read_csv("COVIDdata12.csv")
+    except:
+        print("Cannot Read File")
     return df
 df = get_data_from_csv()
 
     
 
 
-# Removing Data that will not be used for analyzes.
+# Removing Data that will not be used for analisis
 df = df.drop(columns= ['WHO_region', 'Cumulative_cases', 'Cumulative_deaths' ])
 
 
