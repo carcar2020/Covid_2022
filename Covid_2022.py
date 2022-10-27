@@ -48,7 +48,7 @@ da.rename(columns = {'New_cases': 'Total Cases', 'New_deaths': 'Total Deaths'}, 
 # Sidebar that lets you filter data by Country
 st.sidebar.header("Filter Data Here:")
 
-Country = st.selectbox(
+Country = st.sidebar.multiselect(
             "Select the Country:",  options = da['Country'].unique(), default = ['United States of America'] )
 
 df_selection = da.query( "Country == @Country")
