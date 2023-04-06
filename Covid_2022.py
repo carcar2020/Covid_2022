@@ -19,7 +19,7 @@ st.set_page_config(page_title=" COVID-2022", page_icon=image2, layout="wide")
 @st.cache
 def get_data_from_csv():
     try:
-        df = pd.read_csv("COVIDdata15.csv")
+        df = pd.read_csv("COVIDdata16Final2022.csv")
     except:
         print("Cannot Read File")
     return df
@@ -96,8 +96,8 @@ if total_covid19_cases and total_covid19_deaths != 0:
         else:
             st.subheader(f"0")
         with right_column2:
-            st.subheader("Updated")
-            st.subheader(f"12-15-2022")
+            st.subheader("Last Updated For 2022")
+            st.subheader(f"4-05-2023")
 
         # Total Covid-19 Cases by Month [BarChart]
 
